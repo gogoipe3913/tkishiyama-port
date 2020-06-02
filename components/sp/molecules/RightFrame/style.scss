@@ -1,0 +1,27 @@
+@import "~/assets/sass/index.scss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap');
+
+.RightFrame {
+  position: fixed;
+  top: 0;
+  right: -20px;
+  bottom: 0;
+  // height: 100vh;
+  height: 100%;
+  width: 50px;
+  vertical-align: middle;
+  background-color: $global-color-gray-1;
+
+  & &__text {
+    position: absolute;
+    width: 190px;
+    top: 45%;
+    right: -60px;
+    font-size: 10px;
+    letter-spacing: 6px;
+    transform: rotate(270deg);
+    color: #444;
+    font-weight: bold;
+    font-family: 'Playfair Display SC', serif;
+  }
+}

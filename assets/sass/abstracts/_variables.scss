@@ -1,0 +1,68 @@
+// ********************
+// opacity
+// ********************
+$global-opacity: 0.8;
+
+
+// ********************
+// global color
+// ********************
+
+// ex. Default background color
+// $global-color-gray-1: #99914e;
+$global-color-gray-1: #a3b5c0;
+$global-color-gray-2: #6d8493;
+$global-color-gray-3: #55a39e;
+// $global-color-gray-1: #99b8b8;
+
+// ex. Default Text color
+
+// ********************
+// font
+// ********************
+// base
+//
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap');
+
+$global-base-font-family: "Montserrat", 'Sawarabi Gothic', "游ゴシック",YuGothic,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;
+$global-base-font-family-pc: $global-base-font-family, emoji;
+$global-base-font-family-sp: $global-base-font-family;
+$global-base-font-size: 14px;
+// $global-base-line-height: 1.2;
+
+// ********************
+// global shadow
+// ********************
+// ex. popup, flyout
+$global-shadow-1: 0 2px 5px rgba(0, 0, 0, 0.25);
+// ex. floating
+$global-shadow-2: 0 5px 10px rgba(0, 0, 0, 0.25);
+
+// ********************
+// elevation
+// ********************
+
+// Level0 (base)
+$elevation-level0-shadow: none;
+$elevation-level0-z-index: auto;
+
+// Level1 (Flyout, Popup)
+$elevation-level1-shadow: $global-shadow-1;
+$elevation-level1-z-index: 2000000;
+
+// Level2 (Floating, Sticky)
+$elevation-level2-shadow: $global-shadow-2;
+$elevation-level2-z-index: 5000000;
+
+// Level3 (Modal, Dialog, Hamburger)
+$elevation-level3-shadow: none;
+$elevation-level3-z-index: 6000000;
+
+// Level3 (Modal, Dialog, Hamburger)
+$elevation-level4-shadow: none;
+$elevation-level4-z-index: 7000000;
+
+// Level3 (Modal, Dialog, Hamburger)
+$elevation-level5-shadow: none;
+$elevation-level5-z-index: 8000000;

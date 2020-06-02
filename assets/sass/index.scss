@@ -1,0 +1,17 @@
+// prepends
+@import "./abstracts/_variables.scss";
+// @import "./abstracts/_functions";
+@import "./abstracts/_mixins.scss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+
+// main
+// @import "./base/_reset";
+// @import "./layout/_grid";
+@import "./themes/_default.scss";
+
+body {
+  font-family: $global-base-font-family;
+  font-size: $global-base-font-size;
+  background-color: $global-color-gray-1;
+  color: #fff;
+}

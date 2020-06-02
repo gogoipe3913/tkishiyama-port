@@ -1,0 +1,39 @@
+@import '~/assets/sass/index.scss';
+
+.BlogArticleView {
+  & &__closeIcon {
+    position: fixed;
+    top: 30px;
+    right: 15px;
+    z-index: $elevation-level5-z-index;
+  }
+
+  & &__blogFrameSide {
+    position: fixed;
+    z-index: $elevation-level4-z-index;
+  }
+
+  & &__GlobalSnsButton {
+    z-index: $elevation-level2-z-index;
+  }
+
+  & &__GlobalSnsButton--pushed {
+    z-index: $elevation-level4-z-index;
+  }
+
+  & &__GlobalNavButton {
+    z-index: $elevation-level2-z-index;
+  }
+
+  & &__GlobalNavButton--pushed {
+    z-index: $elevation-level4-z-index;
+  }
+
+  & &__snsRouter {
+    z-index: $elevation-level3-z-index;
+  }
+
+  & &__navRouter {
+    z-index: $elevation-level3-z-index;
+  }
+}

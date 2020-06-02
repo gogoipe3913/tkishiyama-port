@@ -1,0 +1,146 @@
+@import '~/assets/sass/index.scss';
+
+.AboutDocument {
+  // ↓storybookで確認する時に追加する
+  background-color: $global-color-gray-1;
+
+  & &__header {
+    opacity: 0;
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  & &__header--show {
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    text-align: center;
+    animation: fade-in 1.8s;
+  }
+
+  & &__subTitle {
+    margin-top: 10px;
+    font-size: 12px;
+    letter-spacing: 4px;
+    font-weight: bold;
+  }
+
+  & &__headerBottomBar {
+    display: inline-block;
+    width: 40px;
+    margin-top: 30px;
+    border-bottom: 1px solid #fff;
+  }
+
+  & &__text {
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 20px;
+    font-size: 12px;
+  }
+
+  & &__text--show {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 20px;
+    font-size: 12px;
+    animation: fade-in 1.8s;
+  }
+
+  & &__textLeftColumn {
+    width: calc(50% - 15px);
+    font-family: 'Sawarabi Gothic', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    line-height: 2.0;
+  }
+
+  & &__textRightColumn {
+    margin-left: 30px;
+    width: calc(50% - 15px);
+    letter-spacing: 1.2px;
+    line-height: 1.7;
+    font-weight: 600;
+  }
+
+  & &__textBodyKey {
+    width: 400px;
+    margin-left: auto;
+    text-align: right;
+  }
+
+  & &__textBodyValue {
+    width: 400px;
+    margin-right: auto;
+    text-align: left;
+  }
+
+  & &__textBodyColumn {
+    display: block;
+  }
+
+  & &__bottomBar {
+    width: 40px;
+    margin: 0 auto;
+    margin-top: 100px;
+    border-bottom: 1px solid #fff;
+  }
+
+  & &__profiel {
+    opacity: 0;
+    padding-top: 100px;
+  }
+
+  & &__profiel--show {
+    animation: fade-in 1.8s;
+    padding-top: 100px;
+  }
+
+  & &__profielImage {
+    text-align: center;
+  }
+
+  & &__profielImageBody {
+    width: 300px;
+  }
+
+  & &__profielImage + &__career{
+    margin-top: 80px;
+  }
+
+  & &__career {
+    text-align: center;
+    letter-spacing: 1.2px;
+    font-size: 12px;
+  }
+
+  & &__careerText + &__careerText {
+    margin-top: 20px;
+  }
+
+  & &__careerTextYear {
+    font-weight: bold;
+  }
+
+  & &__careerTextEvent {
+    font-weight: 600;
+  }
+
+  & &__careerTextYear + &__careerTextEvent {
+    margin-left: 10px;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

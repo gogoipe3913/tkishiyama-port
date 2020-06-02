@@ -1,0 +1,201 @@
+@import '~/assets/sass/index.scss';
+
+.TopScrollArrow {
+    // ↓storybookで確認する時に追加する
+    // background-color: $global-color-gray-1;
+    margin: auto 0;
+    margin-right: 35px;
+
+  & &__wrapper {
+    width: 21px;
+    height: 100px;
+    margin: 0 auto 0;
+  }
+
+  & &__iconLineMask{
+    position: relative;
+    overflow: hidden;
+    width: 20px;
+    height: 100px;
+    margin: 0 auto;
+  }
+
+  & &__iconLine {
+    position: absolute;
+    height: 150px;
+    top: -150px;
+    left: 10px;
+    // width: 1px;
+    border-left: 1px solid #fff;
+    animation: scroll-line 3s infinite;
+  }
+
+  & &__iconTriangle {
+    position: relative;
+    width: 20px;
+    height: 30px;
+    margin: -10px auto 0;
+    animation: triangle-bounce 3s infinite;
+  }
+
+  & &__iconTriangleFirstMask {
+    position: absolute;
+    width: 40px;
+    height: 5px;
+    right: 0;
+    overflow: hidden;
+  }
+
+  & &__iconTriangleFirst {
+    position: absolute;
+    width: 30px;
+    right: 0;
+    border-bottom: 1px solid #fff;
+    animation: triangle-first 3s infinite;
+  }
+
+  & &__iconTriangleSecondMask {
+    position: absolute;
+    width: 10px;
+    height: 30px;
+    right: 0;
+    overflow: hidden;
+  }
+
+  & &__iconTriangleSecond {
+    position: absolute;
+    border-left: 1px solid #fff;
+    height: 44px;
+    right: 5px;
+    top: -6px;
+    transform: rotate(-163deg);
+    animation: triangle-second 3s infinite;
+  }
+
+  & &__iconTriangleThirdMask {
+    position: absolute;
+    width: 10px;
+    height: 30px;
+    left: 1px;
+    overflow: hidden;
+  }
+
+  & &__iconTriangleThird {
+    position: absolute;
+    border-left: 1px solid #fff;
+    height: 40px;
+    left: 5px;
+    top: -3px;
+    transform: rotate(163deg);
+    animation: triangle-third 3s infinite;
+  }
+
+  & &__iconTriangleLastMask {
+    position: absolute;
+    width: 40px;
+    height: 5px;
+    overflow: hidden;
+  }
+
+  & &__iconTriangleLast {
+    position: absolute;
+    border-bottom: 1px solid #fff;
+    width: 120px;
+    left: 0px;
+    animation: triangle-last 3s infinite;
+  }
+}
+
+
+@keyframes triangle-bounce {
+  0% { -webkit-transform:translate3d(0, -5px, 0);
+    transform:translate3d(0, -5px, 0)
+  }
+  50% {
+    -webkit-transform:translate3d(0, 5px, 0);
+    transform:translate3d(0, 5px, 0)
+  }
+  100% {
+    -webkit-transform:translate3d(0, -5px, 0);
+    transform:translate3d(0, -5px, 0)
+  }
+}
+
+@keyframes scroll-line {
+  0% {
+    -webkit-transform:translate3d(0, 0, 0);
+    transform:translate3d(0, 0, 0)
+  }
+  40% {
+    -webkit-transform:translate3d(0, 185px, 0);
+    transform:translate3d(0, 185px, 0)
+  }
+  75% {
+    -webkit-transform:translate3d(0, 175px, 0);
+    transform:translate3d(0, 175px, 0)
+  }
+  100% {
+    -webkit-transform:translate3d(0, 280px, 0);
+    transform:translate3d(0, 280px, 0)
+  }
+}
+
+@keyframes triangle-first {
+  0%,20% {
+    -webkit-transform:translate3d(-40px, 0, 0);
+    transform:translate3d(-40px, 0, 0)
+  }
+  30%, 80% {
+    -webkit-transform:translate3d(10px, 0, 0);
+    transform:translate3d(10px, 0, 0)
+  }
+  85%, 100% {
+    -webkit-transform:translate3d(30px, 0, 0);
+    transform:translate3d(30px, 0, 0)
+  }
+}
+
+@keyframes triangle-second {
+  0%, 25% {
+    -webkit-transform:rotate(-163deg) translate3d(0, 40px, 0);
+    transform:rotate(-163deg) translate3d(0, 40px, 0);
+  }
+  40%, 84% {
+    -webkit-transform:rotate(-163deg) translate3d(0, 0, 0);
+    transform:rotate(-163deg) translate3d(0, 0, 0);
+  }
+  90%, 100% {
+    -webkit-transform:rotate(-163deg) translate3d(0, -37px, 0);
+    transform:rotate(-163deg) translate3d(0, -37px, 0);
+  }
+}
+
+@keyframes triangle-third{
+  0%,33% {
+    -webkit-transform: rotate(163deg) translate3d(0, -34px, 0);
+    transform:rotate(163deg) translate3d(0, -34px, 0)
+  }
+  50%, 88% {
+    -webkit-transform:rotate(163deg) translate3d(0, 0, 0);
+    transform:rotate(163deg) translate3d(0, 0, 0)
+  }
+  95%, 100% {
+    -webkit-transform:rotate(163deg) translate3d(0, 38px, 0);
+    transform:rotate(163deg) translate3d(0, 38px, 0)
+  }
+}
+
+@keyframes triangle-last {
+  0%, 87.5% {
+    -webkit-transform:translate3d(-120px, 0, 0);
+    transform:translate3d(-120px, 0, 0)
+  }
+  91% {
+    -webkit-transform:translate3d(-80px, 0, 0);
+    transform:translate3d(-80px, 0, 0)
+  }
+  100% {
+    -webkit-transform:translate3d(45px, 0, 0);
+    transform:translate3d(45px, 0, 0)
+  }
+}

@@ -1,0 +1,82 @@
+@import '~/assets/sass/index.scss';
+
+.ContactForm {
+  & &__header {
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  & &__subTitle {
+    margin-top: 10px;
+    font-size: 12px;
+    letter-spacing: 4px;
+    font-weight: bold;
+  }
+
+  & &__headerBottomBar {
+    display: inline-block;
+    width: 40px;
+    margin-top: 30px;
+    border-bottom: 1px solid #fff;
+  }
+
+  & &__forms {
+    margin-top: 50px;
+    padding: 20px 0 50px;
+  }
+
+  & &__form {
+    display: block;
+    width: 35vw;
+    padding: 15px 0;
+    color: rgb(74, 74, 74);
+    font-size: 14px;
+    border-bottom: 1px solid #fff;
+
+    &::placeholder {
+      color: #fff;
+      font-size: 12px;
+    }
+  }
+
+  & &__form + &__form {
+    margin-top: 30px;
+  }
+
+  & &__submit {
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 20px 40px;
+    color: $global-color-gray-1;
+    font-weight: 600;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+
+    &:hover {
+      color: #fff;
+      background-color: #7D929E;
+    }
+  }
+
+  & &__sendResult {
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  & &__validationText, &__sendResultText {
+    color: #a51f1f;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
