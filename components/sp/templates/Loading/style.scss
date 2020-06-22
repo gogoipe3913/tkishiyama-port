@@ -1,0 +1,15 @@
+@import "~/assets/sass/index.scss";
+
+.Loading {
+  & &__fullview {
+    width: 100vw;
+    height: 100vh;
+    background: $global-color-gray-1;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  & &__loadingSpacer {
+    height: 30%;
+  }
+}

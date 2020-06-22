@@ -1,0 +1,71 @@
+@import "~/assets/sass/index.scss";
+
+.TopView {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 1s;
+
+  & &__frameBox {
+    position: fixed;
+    z-index: $elevation-level4-z-index;
+  }
+
+  & &__GlobalSnsButton {
+    z-index: $elevation-level2-z-index;
+  }
+
+  & &__GlobalSnsButton--pushed {
+    z-index: $elevation-level4-z-index;
+  }
+
+  & &__GlobalNavButton {
+    z-index: $elevation-level2-z-index;
+  }
+
+  & &__GlobalNavButton--pushed {
+    z-index: $elevation-level4-z-index;
+  }
+
+  & &__snsRouter {
+    z-index: $elevation-level3-z-index;
+  }
+
+  & &__navRouter {
+    z-index: $elevation-level3-z-index;
+  }
+
+  & &__navigationBar {
+    position: fixed;
+    z-index: $elevation-level1-z-index;
+  }
+
+  & &__topScrollArrow {
+    position: relative;
+    top: -200px;
+    z-index: $elevation-level1-z-index;
+  }
+
+  & &__aboutDocument {
+    padding-top: 50px;
+  }
+
+  & &__contactForm {
+    opacity: 0;
+    margin-top: 50px;
+  }
+
+  & &__contactForm--show {
+    animation: fade-in 1.8s;
+    margin-top: 50px;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

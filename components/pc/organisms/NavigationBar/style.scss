@@ -1,0 +1,57 @@
+@import '~/assets/sass/index.scss';
+
+.NavigationBar {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+  width: 100vw;
+  // ↓storybookで確認する時に追加する
+  // background-color: $global-color-gray-1;
+
+  & &__leftColumn {
+    padding-left: 40px;
+  }
+
+  & &__headerLogoButton {
+    width: 110px;
+    padding-top: 2px;
+    background-image: url('../../../../assets/images/header-logo_ov.svg');
+    background-repeat: no-repeat;
+  }
+
+  & &__headerLogoBody {
+    width: 110px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      opacity: 0;
+    }
+  }
+
+  & &__rightColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  & &__itemsList {
+    display: flex;
+    font-weight: 300;
+    padding-right: 40px;
+  }
+
+  & &__itemButton {
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: #7D929E;
+    }
+  }
+
+  & &__item + &__item {
+    letter-spacing: 1.2px;
+    margin-left: 25px;
+    font-family: $global-base-font-family;
+
+  }
+}

@@ -1,0 +1,50 @@
+@import '~/assets/sass/index.scss';
+
+.GlobalSns {
+  // ↓storybookで確認する時に追加する
+  // background-color: $global-color-gray-1;
+  margin: auto 0;
+
+  & &__items {
+    padding-left: 35px;
+  }
+
+  & &__item + &__item {
+    margin-top: 8px;
+  }
+
+  & &__itemButton {
+    width: 15px;
+    padding-top: 1px;
+  }
+
+  & &__itemButtonImg {
+    width: 15px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      opacity: 0;
+    }
+  }
+
+  & &__itemButtonPtrst {
+    background-image: url('../../../../assets/images/sns-icon/ptrst_ov.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  & &__itemButtonInst {
+    background-image: url('../../../../assets/images/sns-icon/inst_ov.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  & &__itemButtonFb {
+    background-image: url('../../../../assets/images/sns-icon/fb_ov.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  & &__itemButtonTwt {
+    background-image: url('../../../../assets/images/sns-icon/twt_ov.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}

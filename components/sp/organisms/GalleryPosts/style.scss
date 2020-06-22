@@ -1,0 +1,30 @@
+@import "~/assets/sass/index.scss";
+
+.GalleryPosts {
+  width: 100%;
+  padding-top: 100vh;
+  color: #444;
+  // font-family: $gallery-base-font-family;
+  // font-family: $global-base-font-family;
+  font-family: $global-frame-font-family;
+  letter-spacing: 5px;
+  font-size: 20px;
+
+  & &__title {
+    position: fixed;
+    top: 50%;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  & &__titleBody {
+    //　TODO: かなりマジックナンバーなのでうまく真ん中に揃える術を探す
+    margin-top: -20px;
+  }
+
+  & &__items {
+    // bottomに対する調整はここだけ特別に許容
+    padding-bottom: 100px;
+  }
+}

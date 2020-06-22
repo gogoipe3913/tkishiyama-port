@@ -1,0 +1,23 @@
+@import "~/assets/sass/index.scss";
+
+.MainBackgroundImage {
+  & &__body {
+    opacity: 0;
+    object-fit: contain;
+  }
+
+  & &__body--show {
+    width: 100%;
+    animation: showImage 1.0s;
+    object-fit: contain;
+  }
+}
+
+@keyframes showImage {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

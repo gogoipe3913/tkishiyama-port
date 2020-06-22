@@ -1,0 +1,134 @@
+@import '~/assets/sass/index.scss';
+
+.BlogArticle {
+  width: 100vw;
+  height: 100vh;
+  color: #444;
+  font-family: $global-base-font-family;
+  // font-weight: bold;
+  font-size: 10px;
+  letter-spacing: 1.2px;
+  text-align: center;
+
+  & &__heroImg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: fadeInHeroImg 1.8s;
+  }
+  & &__heroImgBody {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  & &__bodyWrapper {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    background-color: #fff;
+    z-index: $elevation-level1-z-index;
+    animation: fadeInbodyWrapper 1.8s;
+  }
+
+  & &__body {
+    margin: 0 auto;
+    padding-top: 65px;
+    width: calc(100% - 100px);
+    animation: fadeInbody 1.8s;
+  }
+
+  & &__title {
+    font-size: 22px;
+    font-weight: 100;
+    letter-spacing: 4px;
+    // font-family: "museo-sans",sans-serif;
+  }
+
+  & &__publishedDate {
+    margin-top: 20px;
+    color: $global-color-gray-2;
+    font-weight: bold;
+  }
+
+  & &__articleType {
+    margin-top: 5px;
+    color: $global-color-gray-2;
+    font-weight: bold;
+  }
+
+  & &__text {
+    margin: 50px 0 150px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    line-height: 2.1;
+    text-align: left;
+    color: #080A11;
+
+    & /deep/ h3 {
+      text-align: center;
+      font-weight: bold;
+      color: $global-color-gray-1;
+    }
+
+    & /deep/ p > img {
+      width: 100%;
+      object-fit: cover;
+      padding: 30px 0;
+    }
+  }
+}
+
+@keyframes fadeInHeroImg {
+  0% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInbodyWrapper {
+  0% {
+    opacity: 0;
+    top: 60%;
+  }
+  40% {
+    opacity: 0;
+    top: 60%;
+  }
+  80% {
+    opacity: 1;
+    top: 50%;
+  }
+  100% {
+    opacity: 1;
+    top: 50%;
+  }
+}
+
+@keyframes fadeInbody {
+  0% {
+    opacity: 0;
+    top: 60%;
+  }
+  50% {
+    opacity: 0;
+    top: 60%;
+  }
+  90% {
+    opacity: 1;
+    top: 50%;
+  }
+  100% {
+    opacity: 1;
+    top: 50%;
+  }
+}

@@ -1,0 +1,32 @@
+@import '~/assets/sass/index.scss';
+
+.CloseIcon {
+  width: 25px;
+  height: 25px;
+
+  & &__link {
+    position: relative;
+    top: 0;
+    background-color: #000;
+  }
+
+  & &__crossLine {
+    width: 25px;
+    height: 25px;
+  }
+
+  & &__crossLinePos, & &__crossLineNega {
+    width: 23px;
+    height: 2px;
+    display: block;
+    background: #c9cbcb;
+    position: absolute;
+    top:0;
+  }
+  & &__crossLinePos {
+    transform: rotate(45deg) translateY(0px);
+  }
+  & &__crossLineNega {
+    transform: rotate(-45deg) translateY(0px);
+  }
+}
