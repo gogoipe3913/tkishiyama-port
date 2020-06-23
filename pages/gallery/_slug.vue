@@ -26,4 +26,9 @@ export default {
 };
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.Album {
+  width: 100vw;
+  height: 100vh;
+}
+</style>

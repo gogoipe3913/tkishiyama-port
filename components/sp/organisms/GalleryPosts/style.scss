@@ -13,9 +13,12 @@
   & &__title {
     position: fixed;
     top: 50%;
-    width: 100%;
+    left: 0;
+    right: 0;
+    width: 280px;
     margin: 0 auto;
     text-align: center;
+    pointer-events: none;
   }
 
   & &__titleBody {
