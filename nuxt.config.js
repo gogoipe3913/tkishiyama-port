@@ -1,5 +1,6 @@
 require('dotenv').config();
 const client = require('./plugins/contentful').default;
+const linkResolver = require('./plugins/linkResolver').default;
 
 export default {
   mode: 'spa',
@@ -39,6 +40,7 @@ export default {
    */
   plugins: [
     '~plugins/vueScrollTo',
+    '~plugins/vueSmoothScroll',
     '~plugins/contentful',
     '~plugins/htmlSerializer',
     '~plugins/linkResolver'
@@ -61,16 +63,16 @@ export default {
    ** Prismic settings
    */
   prismic: {
-    endpoint: 'https://tk-gallery.cdn.prismic.io/api/v2'
-    // linkResolver: '@/plugins/link-resolver',
-    // htmlSerializer: '@/plugins/html-serializer'
+    endpoint: 'https://tk-gallery.cdn.prismic.io/api/v2',
+    linkResolver
   },
   /*
    ** for nuxt routing of contentful blog
    */
   generate: {
+    fallback: true,
     routes() {
-      return Promise.all([
+      const routeArray = Promise.all([
         client.getEntries({
           content_type: process.env.CTF_BLOG_POST_TYPE_ID
         })
@@ -81,6 +83,7 @@ export default {
           })
         ];
       });
+      return routeArray;
     }
   },
   markdownit: {
