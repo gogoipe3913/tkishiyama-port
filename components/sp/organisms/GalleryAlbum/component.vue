@@ -75,12 +75,9 @@ export default {
         itemsToShow: 1,
         itemsToSlide: 1,
         infiniteScroll: true,
-        // centerMode: true,
         vertical: true,
         transition: 400,
         autoPlay: false
-        // touchDrag: true
-        // mouseDrag: true
       }
     };
   },
@@ -94,14 +91,17 @@ export default {
   methods: {
     slide({ currentSlide }) {
       currentSlide += 1;
-      currentSlide = currentSlide === 0 ? 12 : currentSlide;
+      currentSlide = currentSlide === 0 ? this.images.length : currentSlide;
       this.currentIndex =
         currentSlide > this.images.length
           ? currentSlide - this.images.length
           : currentSlide;
+      this.setCurrentImg();
     },
     setCurrentImg() {
-      const currentImage = this.images[this.currentIndex];
+      const currentImage = this.images[this.currentIndex - 1];
+      // eslint-disable-next-line no-console
+      console.log(currentImage.url);
       this.currentImg.url = currentImage.url;
       this.currentImg.alt = currentImage.alt;
     },
@@ -116,12 +116,4 @@ export default {
 
 <style scoped lang="scss">
 @import './style.scss';
-ul,
-li {
-  list-style: none;
-  list-style-type: none;
-  margin-block-start: 0em;
-  margin-block-end: 0em;
-  inset-inline-start: 0px;
-}
 </style>

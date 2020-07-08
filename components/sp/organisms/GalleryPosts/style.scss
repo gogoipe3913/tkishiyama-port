@@ -15,19 +15,25 @@
     top: 50%;
     left: 0;
     right: 0;
+    transform: translateY(-50%);
     width: 280px;
     margin: 0 auto;
     text-align: center;
     pointer-events: none;
-  }
-
-  & &__titleBody {
-    //　TODO: かなりマジックナンバーなのでうまく真ん中に揃える術を探す
-    margin-top: -20px;
+    animation: fadeInTitle 2.5s;
   }
 
   & &__items {
     // bottomに対する調整はここだけ特別に許容
     padding-bottom: 100px;
+  }
+}
+
+@keyframes fadeInTitle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

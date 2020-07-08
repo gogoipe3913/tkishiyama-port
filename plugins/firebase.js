@@ -1,4 +1,5 @@
 import firebase from 'firebase';
+import 'firebase/analytics';
 
 const config = {
   apiKey: 'AIzaSyDIFc8sUr1JQSHNqEY8QqLOxd42wjI91l8',
@@ -9,4 +10,7 @@ const config = {
   messagingSenderId: '493593376248'
 };
 firebase.initializeApp(config);
+// const functions = firebase.functions();
+// functions.analytics();
+// export { functions };
 export const functions = firebase.functions();

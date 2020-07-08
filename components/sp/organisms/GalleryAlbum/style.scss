@@ -24,7 +24,7 @@
     top: 0;
     left: 0;
     background-color: #444;
-    opacity: 0.6;
+    opacity: .5;
     animation: fadeInBgMask 2s;
   }
 
@@ -53,7 +53,7 @@
   }
 
   & &__itemsMask {
-    position: relative;
+    position: fixed;
     left: 0;
     right: 0;
     overflow: hidden;
@@ -102,10 +102,10 @@
     opacity: 0;
   }
   60% {
-    opacity: 0.6;
+    opacity: .5;
   }
   100% {
-    opacity: 0.6;
+    opacity: .5;
   }
 }
 
