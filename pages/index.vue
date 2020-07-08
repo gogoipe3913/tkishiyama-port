@@ -14,7 +14,6 @@ import TopViewSp from '~/components/sp/templates/TopView/component.vue';
 export default {
   name: 'App',
   components: {
-    // Loading,
     TopView,
     TopViewSp
   },
@@ -27,11 +26,6 @@ export default {
   created() {
     // eslint-disable-next-line nuxt/no-globals-in-created
     this.isSp = isMobile(window.navigator).phone;
-  },
-  mounted() {
-    setTimeout(() => {
-      this.loading = false;
-    }, 1000);
   }
 };
 </script>
