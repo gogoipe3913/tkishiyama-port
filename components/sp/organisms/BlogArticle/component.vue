@@ -37,8 +37,6 @@ export default {
     }
   },
   data() {
-    // eslint-disable-next-line no-console
-    console.log(this.post.fields.textBody);
     return {
       item: this.post
     };
