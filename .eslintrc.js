@@ -23,6 +23,7 @@ module.exports = {
     'max-len': ["off", { "code": 80 }],
     'quotes': ['warn', 'single'],
     'require-jsdoc': 'off',
-    'vue/no-v-html': 'off'
+    'vue/no-v-html': 'off',
+    'dot-notation': 'off'
   }
 }

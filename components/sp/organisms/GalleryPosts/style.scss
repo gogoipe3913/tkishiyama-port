@@ -1,0 +1,39 @@
+@import "~/assets/sass/index.scss";
+
+.GalleryPosts {
+  width: 100%;
+  padding-top: 100vh;
+  color: #444;
+  // font-family: $gallery-base-font-family;
+  // font-family: $global-base-font-family;
+  font-family: $global-frame-font-family;
+  letter-spacing: 5px;
+  font-size: 20px;
+
+  & &__title {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    width: 280px;
+    margin: 0 auto;
+    text-align: center;
+    pointer-events: none;
+    animation: fadeInTitle 2.5s;
+  }
+
+  & &__items {
+    // bottomに対する調整はここだけ特別に許容
+    padding-bottom: 100px;
+  }
+}
+
+@keyframes fadeInTitle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
