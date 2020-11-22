@@ -23,6 +23,7 @@
 <script>
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 import moment from 'moment';
+
 export default {
   name: 'BlogArticle',
   filters: {

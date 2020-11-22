@@ -1,0 +1,54 @@
+@import "~/assets/sass/index.scss";
+
+.GlobalSnsButton {
+  height: 100vh;
+  position: fixed;
+  left: 0;
+
+  & &__button {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 30px;
+    height: 30px;
+    margin: auto 35px;
+  }
+
+  & &__buttonLine {
+    height: 2px;
+    animation: reverseRotateLine 1s;
+    background-color: #444;
+    transform: rotate(45deg);
+    transition-timing-function: ease-in-out;
+  }
+
+  & &__buttonLine--rotated {
+    height: 2px;
+    animation: rotateLine 1s;
+    transform: rotate(-45deg);
+    background-color: #fff;
+    transition-timing-function: ease-in-out;
+  }
+}
+
+@keyframes reverseRotateLine {
+  0% {
+    transform: rotate(-45deg);
+    background-color: #fff;
+  }
+  100% {
+    transform: rotate(45deg + 360deg);
+    background-color: #444;
+  }
+}
+
+@keyframes rotateLine {
+  0% {
+    transform: rotate(45deg);
+    background-color: #444;
+  }
+  100% {
+    transform: rotate(-45deg - 360deg);
+    background-color: #fff;
+  }
+}
