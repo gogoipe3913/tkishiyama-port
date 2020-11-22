@@ -1,0 +1,96 @@
+@import "~/assets/sass/index.scss";
+
+.GlobalNavButton {
+  height: 100vh;
+  position: fixed;
+  right: 0;
+
+  & &__button {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    margin: auto 35px;
+  }
+
+  & &__buttonLine {
+    height: 2px;
+    width: 25px;
+    background-color: #444;
+    // animation: reverseRotateLine 1s;
+    transition-timing-function: ease-in-out;
+  }
+
+  & &__buttonLine + &__buttonLine{
+    margin-top: 15px;
+  }
+
+  & &__buttonLinePosi {
+    animation: reversePosiRotateLine 1s;
+  }
+
+  & &__buttonLineNega {
+    animation: reverseNegaRotateLine 1s;
+  }
+
+  & &__buttonLine--posiRotated {
+    height: 2px;
+    background-color: #fff;
+    transform: rotate(45deg);
+    animation: posiRotateLine 1s;
+    transition-timing-function: ease-in-out;
+  }
+  & &__buttonLine--negaRotated {
+    height: 2px;
+    background-color: #fff;
+    transform: rotate(-45deg);
+    animation: negaRotateLine 1s;
+    transition-timing-function: ease-in-out;
+  }
+}
+
+@keyframes posiRotateLine {
+  0% {
+    transform: rotate(0);
+    background-color: #444;
+  }
+  100% {
+    transform: rotate(45deg + 360deg);
+    background-color: #fff;
+  }
+}
+
+@keyframes negaRotateLine {
+  0% {
+    transform: rotate(0);
+    background-color: #444;
+  }
+  100% {
+    transform: rotate(-45deg - 360deg);
+    background-color: #fff;
+  }
+}
+
+@keyframes reversePosiRotateLine {
+  0% {
+    transform: rotate(45deg + 360deg);
+    background-color: #fff;
+  }
+  100% {
+    transform: rotate(0);
+    background-color: #444;
+  }
+}
+
+@keyframes reverseNegaRotateLine {
+  0% {
+    transform: rotate(-45deg - 360deg);
+    background-color: #fff;
+  }
+  100% {
+    transform: rotate(0);
+    background-color: #444;
+  }
+}

@@ -1,0 +1,91 @@
+@import '~/assets/sass/index.scss';
+
+.BlogPosts {
+  & &__upper {
+    background-color: #fff;
+    position: fixed;
+    top: -10%;
+    width: 100%;
+    height: 60%;
+    z-index: 0;
+  }
+
+  & &__lower {
+    position: fixed;
+    top:50%;
+    width: 100%;
+    height: 50%;
+    background-color: $global-color-gray-1;
+    animation: fadeInLower 2.5s;
+  }
+
+  & &__blogLogo {
+    position: absolute;
+    top: 46%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  & &__blogTitleGlitch {
+    position: absolute;
+    width: 60%;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  & &__items {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin-top: -50px;
+    padding-bottom: 300px;
+    z-index: $elevation-level1-z-index;
+    animation: fadeInItems 2.5s;
+  }
+
+  & &__item + &__item {
+    margin-top: 80px;
+  }
+}
+
+@keyframes fadeInLower {
+  0% {
+    opacity: 0;
+    top: 60%;
+  }
+  40% {
+    opacity: 0;
+    top: 60%;
+  }
+  70% {
+    opacity: 1;
+    top: 50%;
+  }
+  100% {
+    opacity: 1;
+    top: 50%;
+  }
+}
+
+@keyframes fadeInItems {
+  0% {
+    opacity: 0;
+    top: 60%;
+  }
+  50% {
+    opacity: 0;
+    top: 60%;
+  }
+  80% {
+    opacity: 1;
+    top: 50%;
+  }
+  100% {
+    opacity: 1;
+    top: 50%;
+  }
+}

@@ -1,0 +1,131 @@
+@import '~/assets/sass/index.scss';
+
+.NavRouter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background-color: #444;
+  animation: displayBackground 3s;
+
+  & &__secondBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #54624D;
+    animation: displaySecondBackground 3s;
+  }
+
+  & &__items {
+    width: 60px;
+    margin: 0 auto;
+    padding-top: 50%;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  & &__item + &__item {
+    margin-top: 70px;
+  }
+
+  & &__item--about {
+    animation: fadeInSnsIconAbout 3s;
+  }
+  & &__item--works {
+    animation: fadeInSnsIconWorks 3s;
+  }
+  & &__item--blog {
+    animation: fadeInSnsIconBlog 3s;
+  }
+  & &__item--contact {
+    animation: fadeInSnsIconContact 3s;
+  }
+}
+
+@keyframes displayBackground {
+  0% {
+    left: 100vw;
+  }
+  30% {
+    left: 0;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes displaySecondBackground {
+  0% {
+    left: 100vw;
+  }
+  10% {
+    left: 100vw;
+  }
+  40% {
+    left: 0;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes fadeInSnsIconAbout {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInSnsIconWorks {
+  0% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeInSnsIconBlog {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeInSnsIconContact {
+  0% {
+    opacity: 0;
+  }
+  55% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}

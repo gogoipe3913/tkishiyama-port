@@ -17,7 +17,7 @@
           </a>
         </li>
         <li class="NavigationBar__item">
-          <a class="NavigationBar__itemButton" href="">works</a>
+          <a class="NavigationBar__itemButton" href="">galleries</a>
         </li>
         <li class="NavigationBar__item">
           <nuxt-link class="NavigationBar__itemButton" to="/blog">
