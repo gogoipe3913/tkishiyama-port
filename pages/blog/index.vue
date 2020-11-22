@@ -1,17 +1,25 @@
 <template>
   <div class="Blog">
-    <BlogViewSp :blog-posts="posts" />
+    <BlogView v-if="!isSp" :blog-posts="posts" />
+    <BlogViewSp v-if="isSp" :blog-posts="posts" />
   </div>
 </template>
 
 <script>
+import isMobile from 'ismobilejs';
 import { mapState, mapGetters } from 'vuex';
+import BlogView from '~/components/pc/templates/BlogView/component';
 import BlogViewSp from '~/components/sp/templates/BlogView/component';
 
 export default {
   name: 'Blog',
   components: {
+    BlogView,
     BlogViewSp
+  },
+  created() {
+    // eslint-disable-next-line nuxt/no-globals-in-created
+    this.isSp = isMobile(window.navigator).phone;
   },
   computed: {
     ...mapState(['posts']),

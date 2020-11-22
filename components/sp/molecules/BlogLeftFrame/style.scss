@@ -1,5 +1,5 @@
 @import "~/assets/sass/index.scss";
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap');
+
 
 
 .BlogLeftFrame {
@@ -14,13 +14,13 @@
   & &__text {
     position: absolute;
     width: 400px;
-    top: 53%;
+    top: 55%;
     left: -166px;
     font-size: 10px;
     font-weight: bold;
     letter-spacing: 3px;
-    color: #444;
+    color: var(--color);
     transform: rotate(90deg);
-    font-family: 'Playfair Display SC', serif;
+    font-family: $global-frame-font-family;
   }
 }

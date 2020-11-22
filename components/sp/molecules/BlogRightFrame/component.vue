@@ -1,12 +1,24 @@
 <template>
   <div class="BlogRightFrame">
-    <p class="BlogRightFrame__text">TAIKI KISHIYAMA</p>
+    <p class="BlogRightFrame__text">{{ text }}</p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'BlogRightFrame'
+  name: 'BlogRightFrame',
+  props: {
+    displayText: {
+      type: String,
+      required: false,
+      default: 'TAIKI KISHIYAMA'
+    }
+  },
+  data() {
+    return {
+      text: this.displayText
+    };
+  }
 };
 </script>
 

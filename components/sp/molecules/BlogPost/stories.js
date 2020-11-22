@@ -13,7 +13,14 @@ export const item = () => ({
         title: 'StoryBook用タイトル',
         slug: 'slug-for-storybook',
         publishDate: '2020.05.24',
-        heroImage: './../../../../assets/images/top-image-sp.jpg'
+        thumbImage: {
+          fields: {
+            file: {
+              url:
+                'images.ctfassets.net/qx3vqxu71ky0/5aHUiJ16L07lo1z4YgwYTf/c35b790df98b9dc755948568a13bd744/FH010012.JPG'
+            }
+          }
+        }
       }
     };
     return <BlogPost post={item} />;

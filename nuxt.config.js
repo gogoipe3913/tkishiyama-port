@@ -1,5 +1,6 @@
 require('dotenv').config();
 const client = require('./plugins/contentful').default;
+const linkResolver = require('./plugins/linkResolver').default;
 
 export default {
   mode: 'spa',
@@ -37,7 +38,13 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~plugins/vueScrollTo', '~plugins/contentful'],
+  plugins: [
+    '~plugins/vueScrollTo',
+    '~plugins/vueSmoothScroll',
+    '~plugins/contentful',
+    '~plugins/htmlSerializer',
+    '~plugins/linkResolver'
+  ],
   /*
    ** Nuxt.js dev-modules
    */
@@ -45,18 +52,27 @@ export default {
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
     '@nuxtjs/dotenv',
-    '@nuxtjs/markdownit'
+    '@nuxtjs/markdownit',
+    '@nuxtjs/prismic'
   ],
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/dotenv', '@nuxtjs/markdownit'],
+  modules: ['@nuxtjs/dotenv', '@nuxtjs/markdownit', '@nuxtjs/prismic'],
+  /*
+   ** Prismic settings
+   */
+  prismic: {
+    endpoint: 'https://tk-gallery.cdn.prismic.io/api/v2',
+    linkResolver
+  },
   /*
    ** for nuxt routing of contentful blog
    */
   generate: {
+    fallback: true,
     routes() {
-      return Promise.all([
+      const routeArray = Promise.all([
         client.getEntries({
           content_type: process.env.CTF_BLOG_POST_TYPE_ID
         })
@@ -67,6 +83,7 @@ export default {
           })
         ];
       });
+      return routeArray;
     }
   },
   markdownit: {
