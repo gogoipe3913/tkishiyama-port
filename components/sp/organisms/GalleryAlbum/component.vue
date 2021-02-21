@@ -100,8 +100,6 @@ export default {
     },
     setCurrentImg() {
       const currentImage = this.images[this.currentIndex - 1];
-      // eslint-disable-next-line no-console
-      console.log(currentImage.url);
       this.currentImg.url = currentImage.url;
       this.currentImg.alt = currentImage.alt;
     },

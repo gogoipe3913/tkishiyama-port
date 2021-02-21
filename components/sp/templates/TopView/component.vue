@@ -1,6 +1,5 @@
 <template>
   <div class="TopView">
-    <!-- <NavigationBar ref="navigationBarRef" class="TopView__navigationBar" /> -->
     <FrameBox class="TopView__frameBox" />
     <GlobalSnsButton
       :class="[
@@ -13,16 +12,16 @@
     />
     <SnsRouter v-if="isVisibleSns" class="TopView__snsRouter" />
     <GlobalNavButton
-      :class="[
+      :class="
         isVisibleNav
           ? 'TopView__GlobalNavButton--pushed'
           : 'TopView__GlobalNavButton'
-      ]"
+      "
       :is-nav-displayed="isVisibleNav"
       @clickedNavLine="showNavRouter"
     />
     <NavRouter v-if="isVisibleNav" class="TopView__navRouter" top-link="" />
-    <TopEyeCatch ref="topEyeCatchRef" class="TopView__topEyeCatch" />
+    <TopEyeCatch ref="topEyeCatchRef" />
     <TopScrollArrow class="TopView__topScrollArrow" @click="showSnsRouter" />
     <AboutDocument
       ref="aboutDocumentRef"
@@ -30,17 +29,16 @@
       :about-document-flags="aboutDocumentFlags"
     />
     <ContactForm
-      :class="[
+      :class="
         isShowContactForm
           ? 'TopView__contactForm--show'
           : 'TopView__contactForm'
-      ]"
+      "
     />
   </div>
 </template>
 
 <script>
-// import NavigationBar from '~/components/sp/organisms/NavigationBar/component.vue';
 import FrameBox from '~/components/sp/organisms/FrameBox/component.vue';
 import SnsRouter from '~/components/sp/organisms/SnsRouter/component.vue';
 import NavRouter from '~/components/sp/organisms/NavRouter/component.vue';

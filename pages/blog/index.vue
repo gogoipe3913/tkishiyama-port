@@ -17,13 +17,13 @@ export default {
     BlogView,
     BlogViewSp
   },
-  created() {
-    // eslint-disable-next-line nuxt/no-globals-in-created
-    this.isSp = isMobile(window.navigator).phone;
-  },
   computed: {
     ...mapState(['posts']),
     ...mapGetters(['setEyeCatch', 'draftChip', 'linkTo'])
+  },
+  created() {
+    // eslint-disable-next-line nuxt/no-globals-in-created
+    this.isSp = isMobile(window.navigator).phone;
   }
 };
 </script>

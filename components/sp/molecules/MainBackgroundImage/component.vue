@@ -2,11 +2,11 @@
   <div class="MainBackgroundImage">
     <p>
       <img
-        :class="[
+        :class="
           isRendered
             ? 'MainBackgroundImage__body--show'
             : 'MainBackgroundImage__body'
-        ]"
+        "
         src="../../../../assets/images/top-image-sp.jpg"
         alt="top-image"
       />
