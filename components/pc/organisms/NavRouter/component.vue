@@ -7,14 +7,14 @@
             <span class="NavRouter__itemButtonText">top</span>
           </nuxt-link>
         </li>
-        <li class="NavRouter__item NavRouter__item--works">
-          <nuxt-link class="NavRouter__itemButton" :to="workLink">
-            <span class="NavRouter__itemButtonText">galleries</span>
-          </nuxt-link>
-        </li>
         <li class="NavRouter__item NavRouter__item--blog">
           <nuxt-link class="NavigationBar__itemButton" :to="blogLink">
             <span class="NavRouter__itemButtonText">blog</span>
+          </nuxt-link>
+        </li>
+        <li class="NavRouter__item NavRouter__item--works">
+          <nuxt-link class="NavRouter__itemButton" :to="workLink">
+            <span class="NavRouter__itemButtonText">galleries</span>
           </nuxt-link>
         </li>
         <li class="NavRouter__item NavRouter__item--contact">
