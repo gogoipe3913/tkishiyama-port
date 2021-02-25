@@ -20,8 +20,8 @@
           <a class="NavigationBar__itemButton" href="">galleries</a>
         </li>
         <li class="NavigationBar__item">
-          <nuxt-link class="NavigationBar__itemButton" to="/blog">
-            blog
+          <nuxt-link class="NavigationBar__itemButton" to="/documents">
+            documents
           </nuxt-link>
         </li>
         <li class="NavigationBar__item">

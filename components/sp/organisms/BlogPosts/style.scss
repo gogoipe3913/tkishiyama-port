@@ -1,6 +1,8 @@
 @import '~/assets/sass/index.scss';
 
 .BlogPosts {
+  $title-padding-top: 30vh;
+
   & &__upper {
     background-color: #fff;
     position: fixed;
@@ -10,6 +12,17 @@
     z-index: 0;
   }
 
+  & &__title {
+    width: 100%;
+    margin: $title-padding-top auto 0;
+    color: $global-font-color-black;
+    font-size: $global-base-font-size-large;
+    font-family: $global-frame-font-family;
+    text-align: center;
+    letter-spacing: 1.2px;
+    animation: fadeInTitle 2.0s;
+  }
+
   & &__lower {
     position: fixed;
     top:50%;
@@ -17,23 +30,6 @@
     height: 50%;
     background-color: $global-color-gray-1;
     animation: fadeInLower 2.5s;
-  }
-
-  & &__blogLogo {
-    position: absolute;
-    top: 46%;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-  }
-
-  & &__blogTitleGlitch {
-    position: absolute;
-    width: 60%;
-    top: 50%;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
   }
 
   & &__items {

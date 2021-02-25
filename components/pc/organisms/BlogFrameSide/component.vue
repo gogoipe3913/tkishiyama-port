@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import BlogRightFrame from '~/components/sp/molecules/BlogRightFrame/component.vue';
-import BlogLeftFrame from '~/components/sp/molecules/BlogLeftFrame/component.vue';
+import BlogRightFrame from '~/components/pc/molecules/BlogRightFrame/component.vue';
+import BlogLeftFrame from '~/components/pc/molecules/BlogLeftFrame/component.vue';
 
 export default {
   name: 'FrameSide',
