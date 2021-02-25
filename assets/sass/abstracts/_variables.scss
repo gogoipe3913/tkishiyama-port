@@ -15,6 +15,8 @@ $global-color-gray-2: #6d8493;
 $global-color-gray-3: #55a39e;
 // $global-color-gray-1: #99b8b8;
 
+$global-font-color-black: #444;
+
 // ex. Default Text color
 
 // ********************
@@ -33,7 +35,9 @@ $gallery-frame-font-family-2: Prata, serif;
 $gallery-base-font-family: Prata, serif;
 $global-base-font-family-pc: $global-base-font-family, emoji;
 $global-base-font-family-sp: $global-base-font-family;
+$global-base-font-size-small: 12px;
 $global-base-font-size: 14px;
+$global-base-font-size-large: 18px;
 // $global-base-line-height: 1.2;
 
 // ********************
@@ -71,3 +75,20 @@ $elevation-level4-z-index: 7000000;
 // Level3 (Modal, Dialog, Hamburger)
 $elevation-level5-shadow: none;
 $elevation-level5-z-index: 8000000;
+
+// ********************
+// global color
+// ********************
+$bp-tablet-portrait: 700px;
+$bp-laptop_s: 960px;
+$bp-tablet-landscape: 1100px;
+$bp-laptop_m: 1480px;
+$bp-laptop_l: 1840px;
+
+$breakpoints:(
+  xs: $bp-tablet-portrait,
+  sm: $bp-laptop_s,
+  md: $bp-tablet-landscape,
+  lg: $bp-laptop_m,
+  xl: $bp-laptop_l
+) !default;

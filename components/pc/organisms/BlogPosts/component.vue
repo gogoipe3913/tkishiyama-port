@@ -1,8 +1,7 @@
 <template>
   <div class="BlogPosts">
     <div class="BlogPosts__upper">
-      <BlogGlitchTitle class="BlogPosts__blogTitleGlitch" />
-      <BlogLogo class="BlogPosts__blogLogo" @blogLogoCreated="initLottie" />
+      <p class="BlogPosts__title">DOCUMENTS</p>
     </div>
     <div class="BlogPosts__lower"></div>
     <ul class="BlogPosts__items">
@@ -17,15 +16,11 @@
 </template>
 
 <script>
-import BlogLogo from '~/components/sp/molecules/BlogLogo/component';
-import BlogGlitchTitle from '~/components/sp/molecules/BlogTitleGlitch/component';
-import BlogPost from '~/components/sp/molecules/BlogPost/component';
+import BlogPost from '~/components/pc/molecules/BlogPost/component';
 
 export default {
   name: 'BlogPosts',
   components: {
-    BlogGlitchTitle,
-    BlogLogo,
     BlogPost
   },
   props: {

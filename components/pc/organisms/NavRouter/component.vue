@@ -8,8 +8,8 @@
           </nuxt-link>
         </li>
         <li class="NavRouter__item NavRouter__item--blog">
-          <nuxt-link class="NavigationBar__itemButton" :to="blogLink">
-            <span class="NavRouter__itemButtonText">blog</span>
+          <nuxt-link class="NavigationBar__itemButton" :to="documentLink">
+            <span class="NavRouter__itemButtonText">documents</span>
           </nuxt-link>
         </li>
         <li class="NavRouter__item NavRouter__item--works">
@@ -45,10 +45,10 @@ export default {
       required: false,
       default: '/gallery'
     },
-    blogLink: {
+    documentLink: {
       type: String,
       required: false,
-      default: '/blog'
+      default: '/documents'
     }
   }
 };

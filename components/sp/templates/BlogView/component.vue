@@ -21,7 +21,11 @@
       :is-nav-displayed="isVisibleNav"
       @clickedNavLine="showNavRouter"
     />
-    <NavRouter v-if="isVisibleNav" class="BlogView__navRouter" blog-link="" />
+    <NavRouter
+      v-if="isVisibleNav"
+      class="BlogView__navRouter"
+      document-link=""
+    />
     <BlogPosts :posts="posts" />
   </div>
 </template>

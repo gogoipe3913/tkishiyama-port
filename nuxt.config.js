@@ -79,7 +79,7 @@ export default {
       ]).then(([posts]) => {
         return [
           ...posts.items.map((post) => {
-            return { route: `blog/${post.fields.slug}`, payload: post };
+            return { route: `documents/${post.fields.slug}`, payload: post };
           })
         ];
       });
