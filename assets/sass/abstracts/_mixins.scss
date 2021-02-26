@@ -1,0 +1,17 @@
+@mixin mediaQuery($breakpoint1: null, $breakpoint2: null) {
+  @if $breakpoint1 == null {
+    @media ( max-width: #{map-get($breakpoints, $breakpoint2)} ) {
+      @content;
+    }
+  } @elseif $breakpoint2 == null {
+    @media ( min-width: #{map-get($breakpoints, $breakpoint1)} ) {
+      @content;
+    }
+  } @else {
+    @media ( min-width: #{map-get($breakpoints, $breakpoint1)} ) and ( max-width: #{map-get($breakpoints, $breakpoint2)} ) {
+      @content;
+    }
+  }
+
+
+}

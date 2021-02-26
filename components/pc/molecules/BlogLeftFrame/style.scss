@@ -1,0 +1,26 @@
+@import "~/assets/sass/index.scss";
+
+
+
+.BlogLeftFrame {
+  position: fixed;
+  top: 0;
+  left: -20px;
+  bottom: 0;
+  width: 50px;
+  // height: 100vh;
+  height: 100%;
+
+  & &__text {
+    position: absolute;
+    width: 400px;
+    top: 55%;
+    left: -166px;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: var(--color);
+    transform: rotate(90deg);
+    font-family: $global-frame-font-family;
+  }
+}

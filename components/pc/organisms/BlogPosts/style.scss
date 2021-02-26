@@ -1,15 +1,34 @@
 @import '~/assets/sass/index.scss';
 
 .BlogPosts {
+  $title-padding-top: 20vh;
+  $items-padding-top: 45vh;
+  $items-padding-bottom: 10vh;
+  $item-margin-right: 120px;
+  $item-size: 200px;
+
+  // 半分から上
   & &__upper {
     background-color: #fff;
     position: fixed;
-    top: -10%;
+    top: 0;
     width: 100%;
-    height: 60%;
+    height: 50%;
     z-index: 0;
   }
 
+  & &__title {
+    width: 100%;
+    margin: $title-padding-top auto 0;
+    color: $global-font-color-black;
+    font-size: $global-base-font-size-large;
+    font-family: $global-frame-font-family;
+    text-align: center;
+    letter-spacing: 1.2px;
+    animation: fadeInTitle 2.0s;
+  }
+
+  // 半分から下
   & &__lower {
     position: fixed;
     top:50%;
@@ -19,36 +38,74 @@
     animation: fadeInLower 2.5s;
   }
 
-  & &__blogLogo {
-    position: absolute;
-    top: 46%;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-  }
-
-  & &__blogTitleGlitch {
-    position: absolute;
-    width: 60%;
-    top: 50%;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-  }
-
   & &__items {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    margin-top: -50px;
-    padding-bottom: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 80%;
+    padding-top: $items-padding-top;
+    padding-bottom: $items-padding-bottom;
+    margin: 0 auto;
     z-index: $elevation-level1-z-index;
     animation: fadeInItems 2.5s;
   }
 
-  & &__item + &__item {
-    margin-top: 80px;
+  & &__item {
+    margin-right: $item-margin-right;
+    margin-bottom: 80px;
+  }
+
+  // 1行1アイテム
+  @include mediaQuery($breakpoint2: 'xs') {
+    $item-size: 200px;
+
+    & &__item {
+      margin-right: 0;
+    }
+  }
+
+  // 1行2アイテム
+  @include mediaQuery($breakpoint1: 'xs', $breakpoint2: 'sm') {
+    & &__item {
+      width: calc((100% - #{$item-margin-right}) / 2);
+    }
+
+    & &__item:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+  // 1行3アイテム
+  @include mediaQuery($breakpoint1: 'sm', $breakpoint2: 'lg') {
+    & &__item {
+      width: calc((100% - #{$item-margin-right} * 2) / 3);
+    }
+
+    & &__item:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+  // 1行4アイテム
+  @include mediaQuery($breakpoint1: 'lg', $breakpoint2: 'xl') {
+    & &__item {
+      width: calc((100% - #{$item-margin-right} * 3) / 4);
+    }
+
+    & &__item:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+
+  // 1行5アイテム
+  @include mediaQuery($breakpoint1: 'xl') {
+    & &__item {
+      width: calc((100% - #{$item-margin-right} * 4) / 5);
+    }
+
+    & &__item:nth-child(5n) {
+      margin-right: 0;
+    }
   }
 }
 
@@ -87,5 +144,14 @@
   100% {
     opacity: 1;
     top: 50%;
+  }
+}
+
+@keyframes fadeInTitle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

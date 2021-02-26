@@ -21,19 +21,23 @@
       :is-nav-displayed="isVisibleNav"
       @clickedNavLine="showNavRouter"
     />
-    <NavRouter v-if="isVisibleNav" class="BlogView__navRouter" blog-link="" />
+    <NavRouter
+      v-if="isVisibleNav"
+      class="BlogView__navRouter"
+      document-link=""
+    />
     <BlogPosts :posts="posts" />
   </div>
 </template>
 
 <script>
-import BlogFrameSide from '~/components/sp/organisms/BlogFrameSide/component';
-import BottomFrame from '~/components/sp/molecules/BottomFrame/component';
-import SnsRouter from '~/components/sp/organisms/SnsRouter/component.vue';
-import NavRouter from '~/components/sp/organisms/NavRouter/component.vue';
-import GlobalSnsButton from '~/components/sp/organisms/GlobalSnsButton/component.vue';
-import GlobalNavButton from '~/components/sp/organisms/GlobalNavButton/component.vue';
-import BlogPosts from '~/components/sp/organisms/BlogPosts/component';
+import BlogFrameSide from '~/components/pc/organisms/BlogFrameSide/component';
+import BottomFrame from '~/components/pc/molecules/BottomFrame/component';
+import SnsRouter from '~/components/pc/organisms/SnsRouter/component.vue';
+import NavRouter from '~/components/pc/organisms/NavRouter/component.vue';
+import GlobalSnsButton from '~/components/pc/organisms/GlobalSnsButton/component.vue';
+import GlobalNavButton from '~/components/pc/organisms/GlobalNavButton/component.vue';
+import BlogPosts from '~/components/pc/organisms/BlogPosts/component';
 
 export default {
   name: 'BlogView',
