@@ -5,32 +5,55 @@
         <GlitchChar char="P" />
       </p>
       <p class="MainTitleGlitch__glitchChar">
-        <GlitchChar char="O" />
+        <GlitchChar char="L" />
+      </p>
+      <p class="MainTitleGlitch__glitchChar">
+        <GlitchChar char="A" />
+      </p>
+      <p class="MainTitleGlitch__glitchChar">
+        <GlitchChar char="Y" />
+      </p>
+    </div>
+    <div class="MainTitleGlitch__textColumn">
+      <p class="MainTitleGlitch__glitchChar">
+        <GlitchChar char="G" />
       </p>
       <p class="MainTitleGlitch__glitchChar">
         <GlitchChar char="R" />
       </p>
-    </div>
-    <div class="MainTitleGlitch__textColumn">
-      <p class="MainTitleGlitch__glitchChar">
-        <GlitchChar char="T" />
-      </p>
-      <p class="MainTitleGlitch__glitchChar">
-        <GlitchChar char="F" />
-      </p>
       <p class="MainTitleGlitch__glitchChar">
         <GlitchChar char="O" />
+      </p>
+      <p class="MainTitleGlitch__glitchChar">
+        <GlitchChar char=" " />
       </p>
     </div>
     <div class="MainTitleGlitch__textColumn">
       <p class="MainTitleGlitch__glitchChar">
-        <GlitchChar char="L" />
+        <GlitchChar char=" " />
       </p>
       <p class="MainTitleGlitch__glitchChar">
-        <GlitchChar char="I" />
+        <GlitchChar char=" " />
       </p>
       <p class="MainTitleGlitch__glitchChar">
-        <GlitchChar char="O" />
+        <GlitchChar char="U" />
+      </p>
+      <p class="MainTitleGlitch__glitchChar">
+        <GlitchChar char="N" />
+      </p>
+    </div>
+    <div class="MainTitleGlitch__textColumn">
+      <p class="MainTitleGlitch__glitchChar">
+        <GlitchChar char=" " />
+      </p>
+      <p class="MainTitleGlitch__glitchChar">
+        <GlitchChar char=" " />
+      </p>
+      <p class="MainTitleGlitch__glitchChar">
+        <GlitchChar char=" " />
+      </p>
+      <p class="MainTitleGlitch__glitchChar">
+        <GlitchChar char="D" />
       </p>
     </div>
   </div>
