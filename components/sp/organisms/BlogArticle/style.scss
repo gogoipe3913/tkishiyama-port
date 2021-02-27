@@ -1,9 +1,6 @@
 @import '~/assets/sass/index.scss';
 
 .BlogArticle {
-  $body-min-width: 450px;
-  $body-max-width: 700px;
-
   width: 100vw;
   height: 100vh;
   color: #444;
@@ -37,15 +34,15 @@
   & &__body {
     margin: 0 auto;
     padding-top: 65px;
-    min-width: $body-min-width;
-    max-width: $body-max-width;
+    width: calc(100% - 100px);
     animation: fadeInbody 1.8s;
   }
 
   & &__title {
     font-size: 22px;
-    font-weight: bold;
+    font-weight: 100;
     letter-spacing: 4px;
+    // font-family: "museo-sans",sans-serif;
   }
 
   & &__publishedDate {
@@ -62,7 +59,8 @@
 
   & &__text {
     margin: 50px 0 150px;
-    font-size: $global-base-font-size;
+    font-size: 12px;
+    font-weight: bold;
     letter-spacing: 1.2px;
     line-height: 2.1;
     text-align: left;
@@ -75,11 +73,9 @@
     }
 
     & /deep/ p > img {
-      display: block;
-      width: 70%;
-      margin: 0 auto;
+      width: 100%;
       object-fit: cover;
-      padding: 60px 0 30px;
+      padding: 30px 0;
     }
   }
 }
