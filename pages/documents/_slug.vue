@@ -1,17 +1,21 @@
 <template>
   <div class="Article">
-    <BlogArticleView :current-post="currentPost" />
+    <BlogArticleView v-if="!isSp" :current-post="currentPost" />
+    <BlogArticleViewSp v-if="isSp" :current-post="currentPost" />
   </div>
 </template>
 
 <script>
+import isMobile from 'ismobilejs';
 import { mapGetters } from 'vuex';
-import BlogArticleView from '~/components/sp/templates/BlogArticleView/component';
+import BlogArticleView from '~/components/pc/templates/BlogArticleView/component';
+import BlogArticleViewSp from '~/components/sp/templates/BlogArticleView/component';
 
 export default {
   name: 'Article',
   components: {
-    BlogArticleView
+    BlogArticleView,
+    BlogArticleViewSp
   },
   async asyncData({ payload, store, params, error }) {
     const currentPost =
@@ -28,6 +32,10 @@ export default {
   },
   computed: {
     ...mapGetters(['setEyeCatch'])
+  },
+  created() {
+    // eslint-disable-next-line nuxt/no-globals-in-created
+    this.isSp = isMobile(window.navigator).phone;
   }
 };
 </script>
