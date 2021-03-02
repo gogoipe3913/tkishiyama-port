@@ -1,6 +1,6 @@
 <template>
   <div class="BlogArticleView">
-    <CloseIcon class="BlogArticleView__closeIcon" path="/blog" />
+    <CloseIcon class="BlogArticleView__closeIcon" path="/documents" />
     <BlogFrameSide class="BlogArticleView__blogFrameSide" />
     <GlobalSnsButton
       :class="[
