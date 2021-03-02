@@ -11,7 +11,8 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "storybook": "start-storybook -s ./assets/images -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "deploy": "nuxt build && firebase deploy --only hosting"
   },
   "dependencies": {
     "@contentful/rich-text-html-renderer": "^13.4.0",
