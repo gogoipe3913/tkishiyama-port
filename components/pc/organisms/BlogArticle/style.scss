@@ -81,6 +81,15 @@
       object-fit: cover;
       padding: 60px 0 30px;
     }
+
+    & /deep/ p > em {
+      color: $global-color-gray-2;
+    }
+
+    // イタリック内のリンク
+    & /deep/ p > em > a {
+      text-decoration: none;
+    }
   }
 }
 
