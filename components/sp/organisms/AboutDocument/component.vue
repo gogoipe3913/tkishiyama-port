@@ -28,10 +28,13 @@
         <br />
         <br />
         <span class="AboutDocument__textBodyColumn">
-          このサイトでは, 自分のアウトプットを
+          このページは、
         </span>
         <span class="AboutDocument__textBodyColumn">
-          載せていこうと思っています.
+          好きなものをアウトプットするための
+        </span>
+        <span class="AboutDocument__textBodyColumn">
+          遊び場にしていこうと思っています.
         </span>
         <br />
         <span class="AboutDocument__textBodyColumn">
