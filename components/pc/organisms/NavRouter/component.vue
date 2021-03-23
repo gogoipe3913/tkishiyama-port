@@ -35,6 +35,7 @@
 </template>
 
 <script>
+import { TweenMax } from 'gsap';
 export default {
   name: 'NavRouter',
   props: {
@@ -52,6 +53,31 @@ export default {
       type: String,
       required: false,
       default: '/documents'
+    }
+  },
+  mounted() {
+    // TODO: 各所にカーソルホバー用のイベントリスナーが書かれているので後でまとめる
+    const hoverables = document.querySelectorAll('.hoverable');
+    for (const hoverable of hoverables) {
+      hoverable.addEventListener('mouseenter', this.onMouseHover);
+      hoverable.addEventListener('mouseleave', this.onMouseHoverOut);
+      hoverable.addEventListener('click', this.onMouseHoverOut);
+    }
+  },
+  methods: {
+    onMouseHover(e) {
+      const bigBall = document.querySelector('.cursor__ball--big');
+
+      TweenMax.to(bigBall, 0.3, {
+        scale: 3
+      });
+    },
+    onMouseHoverOut() {
+      const bigBall = document.querySelector('.cursor__ball--big');
+
+      TweenMax.to(bigBall, 0.3, {
+        scale: 1
+      });
     }
   }
 };
