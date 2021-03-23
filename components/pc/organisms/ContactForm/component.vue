@@ -19,25 +19,25 @@
         <input
           v-model="contactForm.name"
           type="text"
-          class="ContactForm__form"
+          class="ContactForm__form hoverable"
           placeholder="name *"
         />
         <input
           v-model="contactForm.email"
           type="text"
-          class="ContactForm__form"
+          class="ContactForm__form hoverable"
           placeholder="E-mail *"
         />
         <input
           v-model="contactForm.phone"
           type="text"
-          class="ContactForm__form"
+          class="ContactForm__form hoverable"
           placeholder="phone *"
         />
         <textarea
           v-model="contactForm.message"
           type="text"
-          class="ContactForm__form"
+          class="ContactForm__form hoverable"
           placeholder="message *"
         ></textarea>
       </fieldset>
@@ -46,7 +46,7 @@
           {{ snackBar.message }}
         </p>
       </div>
-      <button class="ContactForm__submit" @click.prevent="sendMail()">
+      <button class="ContactForm__submit hoverable" @click.prevent="sendMail()">
         send
       </button>
     </form>

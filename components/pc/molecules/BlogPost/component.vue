@@ -1,7 +1,7 @@
 <template>
   <li class="BlogPost">
     <div class="BlogPost__item">
-      <button class="BlogPost__itemButton">
+      <button class="BlogPost__itemButton hoverable">
         <nuxt-link
           class="BlogPost__itemButtonLink"
           tag="img"

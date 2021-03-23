@@ -15,4 +15,7 @@ body {
   // 全体でbodyに設定してしまうと、galleryページでnavRouterを表示したあと背景色が変わってしまうのでコメントアウト
   // background-color: $global-color-gray-1;
   color: #fff;
+  position: relative;
+  //もともとあるカーソルは見えなくなるようにする
+  cursor: none;
 }

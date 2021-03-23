@@ -1,6 +1,6 @@
 <template>
   <div class="CloseIcon">
-    <nuxt-link class="CloseIcon__link" :to="linkPath">
+    <nuxt-link class="CloseIcon__link hoverable" :to="linkPath">
       <div class="CloseIcon__crossLine">
         <span class="CloseIcon__crossLinePos"></span>
         <span class="CloseIcon__crossLineNega"></span>

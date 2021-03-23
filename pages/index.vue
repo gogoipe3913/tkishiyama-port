@@ -8,6 +8,7 @@
 
 <script>
 import isMobile from 'ismobilejs';
+import { TweenMax } from 'gsap';
 import TopView from '~/components/pc/templates/TopView/component.vue';
 import TopViewSp from '~/components/sp/templates/TopView/component.vue';
 
@@ -26,6 +27,30 @@ export default {
   created() {
     // eslint-disable-next-line nuxt/no-globals-in-created
     this.isSp = isMobile(window.navigator).phone;
+  },
+  mounted() {
+    const hoverables = document.querySelectorAll('.hoverable');
+    for (const hoverable of hoverables) {
+      hoverable.addEventListener('mouseenter', this.onMouseHover);
+      hoverable.addEventListener('mouseleave', this.onMouseHoverOut);
+      hoverable.addEventListener('click', this.onMouseHoverOut);
+    }
+  },
+  methods: {
+    onMouseHover(e) {
+      const bigBall = document.querySelector('.cursor__ball--big');
+
+      TweenMax.to(bigBall, 0.3, {
+        scale: 3
+      });
+    },
+    onMouseHoverOut() {
+      const bigBall = document.querySelector('.cursor__ball--big');
+
+      TweenMax.to(bigBall, 0.3, {
+        scale: 1
+      });
+    }
   }
 };
 </script>

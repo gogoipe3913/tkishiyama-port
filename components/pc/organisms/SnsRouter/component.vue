@@ -4,7 +4,7 @@
       <ul class="SnsRouter__items">
         <li class="SnsRouter__item SnsRouter__item--ptrst">
           <a
-            class="SnsRouter__itemButton"
+            class="SnsRouter__itemButton hoverable"
             href="https://www.pinterest.jp/taikikishiyama/boards/"
           >
             <img
@@ -16,7 +16,7 @@
         </li>
         <li class="SnsRouter__item SnsRouter__item--inst">
           <a
-            class="SnsRouter__itemButton"
+            class="SnsRouter__itemButton hoverable"
             href="https://www.instagram.com/tai_kis_913/"
           >
             <img
@@ -28,7 +28,7 @@
         </li>
         <li class="SnsRouter__item SnsRouter__item--fb">
           <a
-            class="SnsRouter__itemButton"
+            class="SnsRouter__itemButton hoverable"
             href="https://www.facebook.com/taikikishiyama913"
           >
             <img
@@ -40,7 +40,7 @@
         </li>
         <li class="SnsRouter__item SnsRouter__item--twt">
           <a
-            class="SnsRouter__itemButton"
+            class="SnsRouter__itemButton hoverable"
             href="https://twitter.com/t____kshy3913"
           >
             <img
@@ -56,8 +56,34 @@
 </template>
 
 <script>
+import { TweenMax } from 'gsap';
 export default {
-  name: 'SnsRouter'
+  name: 'SnsRouter',
+  mounted() {
+    // TODO: 各所にカーソルホバー用のイベントリスナーが書かれているので後でまとめる
+    const hoverables = document.querySelectorAll('.hoverable');
+    for (const hoverable of hoverables) {
+      hoverable.addEventListener('mouseenter', this.onMouseHover);
+      hoverable.addEventListener('mouseleave', this.onMouseHoverOut);
+      hoverable.addEventListener('click', this.onMouseHoverOut);
+    }
+  },
+  methods: {
+    onMouseHover(e) {
+      const bigBall = document.querySelector('.cursor__ball--big');
+
+      TweenMax.to(bigBall, 0.3, {
+        scale: 3
+      });
+    },
+    onMouseHoverOut() {
+      const bigBall = document.querySelector('.cursor__ball--big');
+
+      TweenMax.to(bigBall, 0.3, {
+        scale: 1
+      });
+    }
+  }
 };
 </script>
 
