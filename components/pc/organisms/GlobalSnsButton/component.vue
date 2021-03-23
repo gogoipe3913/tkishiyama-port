@@ -1,6 +1,6 @@
 <template>
   <div class="GlobalSnsButton">
-    <button class="GlobalSnsButton__button" @click="rotateButtonLine">
+    <button class="GlobalSnsButton__button hoverable" @click="rotateButtonLine">
       <div
         :class="[
           isRotated

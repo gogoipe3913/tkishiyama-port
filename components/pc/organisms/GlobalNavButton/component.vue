@@ -1,6 +1,6 @@
 <template>
   <div class="GlobalNavButton">
-    <button class="GlobalNavButton__button" @click="rotateButtonLine">
+    <button class="GlobalNavButton__button hoverable" @click="rotateButtonLine">
       <div
         :class="[
           isRotated

@@ -4,7 +4,7 @@
       <ul class="SnsRouter__items">
         <li class="SnsRouter__item SnsRouter__item--ptrst">
           <a
-            class="SnsRouter__itemButton"
+            class="SnsRouter__itemButton hoverable"
             href="https://www.pinterest.jp/taikikishiyama/boards/"
           >
             <img
@@ -16,7 +16,7 @@
         </li>
         <li class="SnsRouter__item SnsRouter__item--inst">
           <a
-            class="SnsRouter__itemButton"
+            class="SnsRouter__itemButton hoverable"
             href="https://www.instagram.com/tai_kis_913/"
           >
             <img
@@ -28,7 +28,7 @@
         </li>
         <li class="SnsRouter__item SnsRouter__item--fb">
           <a
-            class="SnsRouter__itemButton"
+            class="SnsRouter__itemButton hoverable"
             href="https://www.facebook.com/taikikishiyama913"
           >
             <img
@@ -40,7 +40,7 @@
         </li>
         <li class="SnsRouter__item SnsRouter__item--twt">
           <a
-            class="SnsRouter__itemButton"
+            class="SnsRouter__itemButton hoverable"
             href="https://twitter.com/t____kshy3913"
           >
             <img

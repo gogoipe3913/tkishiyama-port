@@ -3,7 +3,7 @@
     <ul class="GlobalSns__items">
       <li class="GlobalSns__item">
         <a
-          class="GlobalSns__itemButton GlobalSns__itemButtonPtrst"
+          class="GlobalSns__itemButton GlobalSns__itemButtonPtrst hoverable"
           href="https://www.pinterest.jp/taikikishiyama/boards/"
         >
           <img
@@ -15,7 +15,7 @@
       </li>
       <li class="GlobalSns__item">
         <a
-          class="GlobalSns__itemButton GlobalSns__itemButtonInst"
+          class="GlobalSns__itemButton GlobalSns__itemButtonInst hoverable"
           href="https://www.instagram.com/tai_kis_913/"
         >
           <img
@@ -27,7 +27,7 @@
       </li>
       <li class="GlobalSns__item">
         <a
-          class="GlobalSns__itemButton GlobalSns__itemButtonFb"
+          class="GlobalSns__itemButton GlobalSns__itemButtonFb hoverable"
           href="https://www.facebook.com/taikikishiyama913"
         >
           <img
@@ -39,7 +39,7 @@
       </li>
       <li class="GlobalSns__item">
         <a
-          class="GlobalSns__itemButton GlobalSns__itemButtonTwt"
+          class="GlobalSns__itemButton GlobalSns__itemButtonTwt hoverable"
           href="https://twitter.com/t____kshy3913"
         >
           <img
