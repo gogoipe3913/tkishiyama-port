@@ -1,0 +1,11 @@
+@import "~/assets/sass/index.scss";
+
+.TopFrame {
+  position: fixed;
+  top: -20px;
+  left: 0;
+  right: 0;
+  height: 50px;
+  width: 100vw;
+  background-color: $global-color-gray-1;
+}
