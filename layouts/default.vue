@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div ref="cursor" class="cursor">
+    <div v-if="!isSp" ref="cursor" class="cursor">
       <div ref="bigBall" class="cursor__ball cursor__ball--big ">
         <svg height="50" width="50">
           <circle cx="30" cy="30" r="20" stroke-width="0"></circle>
@@ -22,6 +22,11 @@ import isMobile from 'ismobilejs';
 import { TweenMax } from 'gsap';
 
 export default {
+  data() {
+    return {
+      isSp: false
+    };
+  },
   created() {
     // eslint-disable-next-line nuxt/no-globals-in-created
     this.isSp = isMobile(window.navigator).phone;
