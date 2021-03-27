@@ -1,0 +1,28 @@
+@import "~/assets/sass/index.scss";
+
+
+
+.GalleryLeftFrame {
+  position: fixed;
+  top: 0;
+  left: -20px;
+  bottom: 0;
+  width: 50px;
+  // height: 100vh;
+  height: 100%;
+  text-align: center;
+
+  & &__text {
+    position: absolute;
+    width: 80px;
+    top: 49%;
+    left: -3px;
+    transform: translateX(-50%);
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: var(--color);
+    transform: rotate(90deg);
+    font-family: $global-frame-font-family;
+  }
+}
