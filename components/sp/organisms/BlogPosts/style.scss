@@ -34,7 +34,8 @@
 
   & &__items {
     position: absolute;
-    top: 50%;
+    // %指定だとうまくスタイルが当たらないのでvhで指定する
+    top: 50vh;
     left: 0;
     right: 0;
     margin-top: -50px;

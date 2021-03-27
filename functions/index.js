@@ -33,7 +33,7 @@ const adminContents = (data) => {
 
 exports.sendMail = functions.https.onCall(async (data, context) => {
   // メール設定
-  let adminMail = {
+  const adminMail = {
     from: gmailEmail,
     to: adminEmail,
     subject: 'Portfolioでのお問い合わせ',
