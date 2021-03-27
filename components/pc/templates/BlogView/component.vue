@@ -3,6 +3,7 @@
     <BlogFrameSide class="BlogView__blogFrameSide" />
     <BottomFrame class="BlogView__bottomFrame" />
     <GlobalSnsButton
+      class="hoverable"
       :class="[
         isVisibleSns
           ? 'BlogView__GlobalSnsButton--pushed'
@@ -13,6 +14,7 @@
     />
     <SnsRouter v-if="isVisibleSns" class="BlogView__snsRouter" />
     <GlobalNavButton
+      class="hoverable"
       :class="[
         isVisibleNav
           ? 'BlogView__GlobalNavButton--pushed'

@@ -2,14 +2,12 @@
 
 .MainBackgroundImage {
   & &__body {
-    opacity: 0;
-    object-fit: contain;
-  }
-
-  & &__body--show {
     width: 100%;
+    min-height: 100vh;
     animation: showImage 1.0s;
     object-fit: contain;
+    background-image: url('../../../../assets/images/top-image-fixed.png');
+    background-position: center top;
   }
 }
 

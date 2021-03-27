@@ -28,17 +28,17 @@
           <br />
           <br />
           <span class="AboutDocument__textBodyColumn">
-            このサイトでは, 自分のアウトプットを
+            このページは, 好きなものをアウトプットするための
           </span>
           <span class="AboutDocument__textBodyColumn">
-            載せていこうと思っています.
+            遊び場にしていこうと思っています.
           </span>
           <br />
           <span class="AboutDocument__textBodyColumn">
             興味を持ってくれた誰かに
           </span>
           <span class="AboutDocument__textBodyColumn">
-            更に自分を知ってもらえるように, と言う意図です.
+            更に自分を知ってもらえればと思います.
           </span>
           <br />
           <br />
@@ -63,10 +63,10 @@
           </span>
           <br />
           <span class="AboutDocument__textBodyColumn">
-            このページが, 一つのきっかけになれば
+            このページが,
           </span>
           <span class="AboutDocument__textBodyColumn">
-            嬉しいです.
+            一つのきっかけになれば嬉しいです.
           </span>
           <br />
           <br />

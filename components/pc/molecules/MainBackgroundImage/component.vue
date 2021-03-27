@@ -1,16 +1,6 @@
 <template>
   <div class="MainBackgroundImage">
-    <p>
-      <img
-        :class="[
-          isRendered
-            ? 'MainBackgroundImage__body--show'
-            : 'MainBackgroundImage__body'
-        ]"
-        src="../../../../assets/images/top-image-fixed.png"
-        alt="top-image"
-      />
-    </p>
+    <p class="MainBackgroundImage__body"></p>
   </div>
 </template>
 

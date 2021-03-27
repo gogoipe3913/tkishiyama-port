@@ -1,7 +1,30 @@
 <template>
   <div class="TopView">
-    <NavigationBar ref="navigationBarRef" class="TopView__navigationBar" />
-    <GlobalSns class="TopView__globalSns" />
+    <FrameBox class="TopView__frameBox" />
+    <GlobalSnsButton
+      class="hoverable"
+      :class="[
+        isVisibleSns
+          ? 'TopView__GlobalSnsButton--pushed'
+          : 'TopView__GlobalSnsButton'
+      ]"
+      :is-sns-displayed="isVisibleSns"
+      @clickedSnsLine="showSnsRouter"
+    />
+    <SnsRouter v-if="isVisibleSns" class="TopView__snsRouter" />
+    <GlobalNavButton
+      class="hoverable"
+      :class="[
+        isVisibleNav
+          ? 'TopView__GlobalNavButton--pushed'
+          : 'TopView__GlobalNavButton'
+      ]"
+      :is-nav-displayed="isVisibleNav"
+      @clickedNavLine="showNavRouter"
+    />
+    <NavRouter v-if="isVisibleNav" class="TopView__navRouter" />
+    <!-- <NavigationBar ref="navigationBarRef" class="TopView__navigationBar" /> -->
+    <!-- <GlobalSns class="TopView__globalSns" /> -->
     <TopEyeCatch ref="topEyeCatchRef" class="TopView__topEyeCatch" />
     <TopScrollArrow class="TopView__topScrollArrow" />
     <AboutDocument
@@ -20,8 +43,13 @@
 </template>
 
 <script>
-import NavigationBar from '~/components/pc/organisms/NavigationBar/component.vue';
-import GlobalSns from '~/components/pc/organisms/GlobalSns/component.vue';
+import FrameBox from '~/components/pc/organisms/FrameBox/component.vue';
+import SnsRouter from '~/components/pc/organisms/SnsRouter/component.vue';
+import NavRouter from '~/components/pc/organisms/NavRouter/component.vue';
+import GlobalSnsButton from '~/components/pc/organisms/GlobalSnsButton/component.vue';
+import GlobalNavButton from '~/components/pc/organisms/GlobalNavButton/component.vue';
+// import NavigationBar from '~/components/pc/organisms/NavigationBar/component.vue';
+// import GlobalSns from '~/components/pc/organisms/GlobalSns/component.vue';
 import TopEyeCatch from '~/components/pc/organisms/TopEyeCatch/component.vue';
 import TopScrollArrow from '~/components/pc/organisms/TopScrollArrow/component.vue';
 import AboutDocument from '~/components/pc/organisms/AboutDocument/component.vue';
@@ -30,8 +58,13 @@ import ContactForm from '~/components/pc/organisms/ContactForm/component.vue';
 export default {
   name: 'TopView',
   components: {
-    NavigationBar,
-    GlobalSns,
+    FrameBox,
+    SnsRouter,
+    NavRouter,
+    GlobalSnsButton,
+    GlobalNavButton,
+    // NavigationBar,
+    // GlobalSns,
     TopEyeCatch,
     TopScrollArrow,
     AboutDocument,
@@ -46,7 +79,10 @@ export default {
         isShowText: false,
         isShowProfiel: false
       },
-      isShowContactForm: false
+      isShowContactForm: false,
+      posts: this.blogPosts,
+      isVisibleSns: false,
+      isVisibleNav: false
     };
   },
   mounted() {
@@ -81,6 +117,14 @@ export default {
         this.isShowContactForm = true;
         window.removeEventListener('scroll', this.isHeightAboutDocument);
       }
+    },
+    showSnsRouter(isRotated) {
+      this.isVisibleSns = isRotated;
+      return this.isVisibleSns;
+    },
+    showNavRouter(isRotated) {
+      this.isVisibleNav = isRotated;
+      return this.isVisibleNav;
     }
   }
 };
