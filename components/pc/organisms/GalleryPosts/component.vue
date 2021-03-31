@@ -49,43 +49,23 @@ export default {
   methods: {
     nowTitle() {
       const scroll = window.scrollY;
+      const FIRST_CHANGE_TITLE_POSITION = this.windowHeight * 1.5;
 
-      if (scroll < this.windowHeight / 2 + this.postHeights[1]) {
+      if (scroll < FIRST_CHANGE_TITLE_POSITION) {
         this.title = this.items[0].data.title[0].text;
-      } else if (
-        scroll >= this.windowHeight / 2 + this.postHeights[1] &&
-        scroll < this.windowHeight + this.postHeights[1]
-      ) {
-        this.title = this.items[1].data.title[0].text;
-      } else if (
-        scroll >= this.windowHeight + this.postHeights[1] &&
-        scroll < this.windowHeight + this.postHeights[1] + this.postHeights[1]
-      ) {
-        this.title = this.items[2].data.title[0].text;
-      } else if (
-        scroll >=
-          this.windowHeight + this.postHeights[1] + this.postHeights[2] &&
-        scroll <
-          this.windowHeight +
-            this.postHeights[1] +
-            this.postHeights[2] +
-            this.postHeights[3]
-      ) {
-        this.title = this.items[3].data.title[0].text;
-      } else if (
-        scroll >=
-          this.windowHeight +
-            this.postHeights[1] +
-            this.postHeights[2] +
-            this.postHeights[3] &&
-        scroll <
-          this.windowHeight +
-            this.postHeights[1] +
-            this.postHeights[2] +
-            this.postHeights[3] +
-            this.postHeights[4]
-      ) {
-        this.title = this.items[4].data.title[0].text;
+      } else {
+        this.posts.forEach((post, index) => {
+          if (
+            // 一つ目までは別の処理
+            index > 0 &&
+            // eslint-disable-next-line prettier/prettier
+            FIRST_CHANGE_TITLE_POSITION + this.windowHeight * index <= scroll &&
+            // eslint-disable-next-line prettier/prettier
+            scroll < FIRST_CHANGE_TITLE_POSITION + this.windowHeight * (index + 1)
+          ) {
+            this.title = this.items[index].data.title[0].text;
+          }
+        });
       }
     }
   }
