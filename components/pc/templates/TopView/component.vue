@@ -48,8 +48,6 @@ import SnsRouter from '~/components/pc/organisms/SnsRouter/component.vue';
 import NavRouter from '~/components/pc/organisms/NavRouter/component.vue';
 import GlobalSnsButton from '~/components/pc/organisms/GlobalSnsButton/component.vue';
 import GlobalNavButton from '~/components/pc/organisms/GlobalNavButton/component.vue';
-// import NavigationBar from '~/components/pc/organisms/NavigationBar/component.vue';
-// import GlobalSns from '~/components/pc/organisms/GlobalSns/component.vue';
 import TopEyeCatch from '~/components/pc/organisms/TopEyeCatch/component.vue';
 import TopScrollArrow from '~/components/pc/organisms/TopScrollArrow/component.vue';
 import AboutDocument from '~/components/pc/organisms/AboutDocument/component.vue';
@@ -63,8 +61,6 @@ export default {
     NavRouter,
     GlobalSnsButton,
     GlobalNavButton,
-    // NavigationBar,
-    // GlobalSns,
     TopEyeCatch,
     TopScrollArrow,
     AboutDocument,

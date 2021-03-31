@@ -1,0 +1,8 @@
+@import "~/assets/sass/index.scss";
+
+.GalleryAlbumView {
+  & &__leftFrame {
+    position: fixed;
+    z-index: $elevation-level4-z-index;
+  }
+}

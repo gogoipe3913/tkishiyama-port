@@ -132,7 +132,7 @@ html {
 .cursor {
   display: none;
   pointer-events: none;
-  transition-duration: 2s;
+  transition-duration: 3s;
 
   &__ball {
     position: fixed;
