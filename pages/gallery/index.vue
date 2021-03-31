@@ -12,18 +12,9 @@ import GalleryView from '~/components/pc/templates/GalleryView/component';
 import GalleryViewSp from '~/components/sp/templates/GalleryView/component';
 export default {
   name: 'Gallery',
-  data() {
-    return {
-      isSp: false
-    };
-  },
   components: {
     GalleryView,
     GalleryViewSp
-  },
-  created() {
-    // eslint-disable-next-line nuxt/no-globals-in-created
-    this.isSp = isMobile(window.navigator).phone;
   },
   async asyncData({ $prismic, error }) {
     try {
@@ -37,6 +28,15 @@ export default {
     } catch (e) {
       error({ statusCode: 404, message: 'Page not found' });
     }
+  },
+  data() {
+    return {
+      isSp: false
+    };
+  },
+  created() {
+    // eslint-disable-next-line nuxt/no-globals-in-created
+    this.isSp = isMobile(window.navigator).phone;
   },
   mounted() {
     const hoverables = document.querySelectorAll('.hoverable');

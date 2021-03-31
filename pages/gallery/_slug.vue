@@ -16,15 +16,6 @@ export default {
     GalleryAlbumView,
     GalleryAlbumViewSp
   },
-  data() {
-    return {
-      isSp: false
-    };
-  },
-  created() {
-    // eslint-disable-next-line nuxt/no-globals-in-created
-    this.isSp = isMobile(window.navigator).phone;
-  },
   async asyncData({ $prismic, params, error }) {
     try {
       const currentPost = await $prismic.api.query(
@@ -36,6 +27,15 @@ export default {
     } catch (e) {
       error({ statusCode: 404, message: 'Page not found' });
     }
+  },
+  data() {
+    return {
+      isSp: false
+    };
+  },
+  created() {
+    // eslint-disable-next-line nuxt/no-globals-in-created
+    this.isSp = isMobile(window.navigator).phone;
   },
   mounted() {
     const hoverables = document.querySelectorAll('.hoverable');
