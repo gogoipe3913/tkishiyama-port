@@ -1,13 +1,16 @@
 @import "~/assets/sass/index.scss";
 
 .MainBackgroundImage {
+  $body-margin: 30px;
+
   & &__body {
-    width: 100%;
-    min-height: 100vh;
+    margin: $body-margin;
+    width: calc(100% - #{$body-margin} * 2);
+    min-height: calc(100vh - #{$body-margin} * 2);
     animation: showImage 1.0s;
-    object-fit: contain;
     background-image: url('../../../../assets/images/top-image-fixed.png');
-    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 
