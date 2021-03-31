@@ -59,9 +59,9 @@ export default {
             // 一つ目までは別の処理
             index > 0 &&
             // eslint-disable-next-line prettier/prettier
-            FIRST_CHANGE_TITLE_POSITION + this.windowHeight * index <= scroll &&
+            FIRST_CHANGE_TITLE_POSITION + this.windowHeight * (index - 1)  <= scroll &&
             // eslint-disable-next-line prettier/prettier
-            scroll < FIRST_CHANGE_TITLE_POSITION + this.windowHeight * (index + 1)
+            scroll < FIRST_CHANGE_TITLE_POSITION + this.windowHeight * index
           ) {
             this.title = this.items[index].data.title[0].text;
           }
