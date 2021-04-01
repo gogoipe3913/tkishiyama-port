@@ -13,7 +13,7 @@
           </nuxt-link>
         </li>
         <li class="NavRouter__item NavRouter__itemBlog">
-          <nuxt-link class="NavigationBar__itemButton" :to="documentLink">
+          <nuxt-link class="NavRouter__itemButton" :to="documentLink">
             <span class="NavRouter__itemButtonText">documents</span>
           </nuxt-link>
         </li>

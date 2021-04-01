@@ -37,6 +37,10 @@
     font-size: $global-base-font-size-exlarge * 2;
   }
 
+  & &__itemButton {
+    color: #fff;
+  }
+
   & &__item + &__item {
     margin-top: $item-margin-top;
   }

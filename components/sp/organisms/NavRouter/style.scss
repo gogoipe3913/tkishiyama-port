@@ -40,6 +40,10 @@
     margin-top: $item-margin;
   }
 
+  & &__itemButton {
+    color: #fff;
+  }
+
   & &__itemAbout {
     animation: fadeInSnsIconAbout 3s;
   }

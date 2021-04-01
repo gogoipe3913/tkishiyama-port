@@ -8,10 +8,7 @@
           </nuxt-link>
         </li>
         <li class="NavRouter__item NavRouter__item--blog">
-          <nuxt-link
-            class="NavigationBar__itemButton hoverable"
-            :to="documentLink"
-          >
+          <nuxt-link class="NavRouter__itemButton hoverable" :to="documentLink">
             <span class="NavRouter__itemButtonText">documents</span>
           </nuxt-link>
         </li>

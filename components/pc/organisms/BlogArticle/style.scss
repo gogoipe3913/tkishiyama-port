@@ -94,6 +94,11 @@
     & /deep/ p > em > a {
       text-decoration: none;
       cursor: none;
+      color: inherit;
+
+      &:hover {
+        cursor: none;
+      }
     }
   }
 }
