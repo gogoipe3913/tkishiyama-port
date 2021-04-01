@@ -38,9 +38,6 @@
 </template>
 
 <script>
-// import { Hooper, Slide } from 'hooper';
-// import 'hooper/dist/hooper.css';
-
 export default {
   name: 'GalleryAlbum',
   props: {
@@ -55,16 +52,9 @@ export default {
         url: '',
         alt: ''
       },
-      currentIndex: 0,
+      currentIndex: 1,
       images: [],
-      hooperSettings: {
-        itemsToShow: 1,
-        itemsToSlide: 1,
-        infiniteScroll: true,
-        vertical: true,
-        transition: 400,
-        autoPlay: false
-      }
+      windowHeight: window.innerHeight
     };
   },
   mounted() {
@@ -73,19 +63,11 @@ export default {
       this.currentImg.url = this.getImages()[0].url;
       this.currentImg.alt = this.getImages()[0].alt;
     }, 100);
+    window.addEventListener('scroll', this.changeCurrent);
   },
   methods: {
-    slide({ currentSlide }) {
-      currentSlide += 1;
-      currentSlide = currentSlide === 0 ? this.images.length : currentSlide;
-      this.currentIndex =
-        currentSlide > this.images.length
-          ? currentSlide - this.images.length
-          : currentSlide;
-      this.setCurrentImg();
-    },
     setCurrentImg() {
-      const currentImage = this.images[this.currentIndex - 1];
+      const currentImage = this.images[this.currentIndex];
       this.currentImg.url = currentImage.url;
       this.currentImg.alt = currentImage.alt;
     },
@@ -93,6 +75,30 @@ export default {
       return Object.values(this.post).filter((item) => {
         return item.url;
       });
+    },
+    changeCurrent() {
+      const scroll = window.scrollY;
+      const FIRST_CHANGE_TITLE_POSITION = this.windowHeight;
+
+      if (scroll < FIRST_CHANGE_TITLE_POSITION) {
+        this.currentIndex = 1;
+        this.currentImg.url = this.images[0].url;
+        this.currentImg.alt = this.images[0].alt;
+      } else {
+        this.images.forEach((image, index) => {
+          if (
+            index > 0 &&
+            // eslint-disable-next-line prettier/prettier
+            FIRST_CHANGE_TITLE_POSITION + this.windowHeight * (index - 1) <= scroll &&
+            // eslint-disable-next-line prettier/prettier
+            scroll < FIRST_CHANGE_TITLE_POSITION + this.windowHeight * index
+          ) {
+            this.currentIndex = index + 1;
+            this.currentImg.url = this.images[index].url;
+            this.currentImg.alt = this.images[index].alt;
+          }
+        });
+      }
     }
   }
 };
