@@ -72,6 +72,10 @@
       color: $global-color-gray-1;
     }
 
+    & /deep/ p {
+      line-height: 2.4em;
+    }
+
     & /deep/ p > img {
       width: 100%;
       object-fit: cover;
