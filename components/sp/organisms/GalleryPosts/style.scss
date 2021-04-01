@@ -22,11 +22,6 @@
     pointer-events: none;
     animation: fadeInTitle 2.5s;
   }
-
-  & &__items {
-    // bottomに対する調整はここだけ特別に許容
-    padding-bottom: 100px;
-  }
 }
 
 @keyframes fadeInTitle {
