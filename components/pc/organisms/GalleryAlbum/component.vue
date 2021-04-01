@@ -89,13 +89,13 @@ export default {
           if (
             index > 0 &&
             // eslint-disable-next-line prettier/prettier
-            FIRST_CHANGE_TITLE_POSITION + this.windowHeight * (index - 1) < scroll &&
+            FIRST_CHANGE_TITLE_POSITION + this.windowHeight * (index - 1) <= scroll &&
             // eslint-disable-next-line prettier/prettier
             scroll < FIRST_CHANGE_TITLE_POSITION + this.windowHeight * index
           ) {
             this.currentIndex = index + 1;
-            this.currentImg.url = this.images[index + 1].url;
-            this.currentImg.alt = this.images[index + 1].alt;
+            this.currentImg.url = this.images[index].url;
+            this.currentImg.alt = this.images[index].alt;
           }
         });
       }
