@@ -93,6 +93,7 @@
     // イタリック内のリンク
     & /deep/ p > em > a {
       text-decoration: none;
+      cursor: none;
     }
   }
 }
