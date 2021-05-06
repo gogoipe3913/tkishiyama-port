@@ -25,5 +25,11 @@ module.exports = {
     'require-jsdoc': 'off',
     'vue/no-v-html': 'off',
     'dot-notation': 'off'
-  }
+  },
+  overrides: [
+    {
+      files: ["*.vue"],
+      processor: "vue/.vue"
+    }
+  ]
 }
