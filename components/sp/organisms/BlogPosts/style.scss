@@ -41,7 +41,7 @@
     margin-top: -50px;
     padding-bottom: 300px;
     z-index: $elevation-level1-z-index;
-    animation: fadeInItems 2.5s;
+    animation: fadeInItems 2.8s;
   }
 
   & &__item + &__item {
@@ -71,18 +71,18 @@
 @keyframes fadeInItems {
   0% {
     opacity: 0;
-    top: 60%;
+    top: 60vh;
   }
   50% {
     opacity: 0;
-    top: 60%;
+    top: 60vh;
   }
   80% {
     opacity: 1;
-    top: 50%;
+    top: 50vh;
   }
   100% {
     opacity: 1;
-    top: 50%;
+    top: 50vh;
   }
 }
