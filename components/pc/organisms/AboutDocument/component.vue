@@ -81,7 +81,7 @@
           <span class="AboutDocument__textBodyColumn">Taiki Kishiyama</span>
           <br />
           <span class="AboutDocument__textBodyColumn">
-            A frontend engineer working at yahoo! JAPAN.
+            A frontend engineer / Web Designer.
           </span>
           <br />
           <span class="AboutDocument__textBodyColumn">Web :</span>
@@ -176,6 +176,12 @@
           <span class="AboutDocument__careerTextYear">2019 :</span>
           <span class="AboutDocument__careerTextEvent">
             Yahoo! JAPAN corp.
+          </span>
+        </p>
+        <p class="AboutDocument__careerText">
+          <span class="AboutDocument__careerTextYear">2021 :</span>
+          <span class="AboutDocument__careerTextEvent">
+            Freelance.
           </span>
         </p>
       </div>
